@@ -17,7 +17,7 @@ Npm.depends({
 Package.onUse(function(api) {
     api.versionsFrom('1.2.1');
     api.use('ecmascript');
-    api.addFiles('aerialjs.js');
+    api.addFiles('server/aerialjs.js');
 });
 
 Package.onTest(function(api) {
@@ -27,3 +27,4 @@ Package.onTest(function(api) {
     // Add test files, eg:
     api.addFiles('tests/aerial-test.js');
 });
+

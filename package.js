@@ -21,10 +21,9 @@ Package.onUse(function(api) {
 });
 
 Package.onTest(function(api) {
-    api.use('ecmascript');
     api.use(["mike:mocha-package", "practicalmeteor:chai", "practicalmeteor:sinon"]);
 
     api.use('bquarks:aerialjs');
     // Add test files, eg:
-    api.addFiles('aerialjs-test.js');
+    api.addFiles('tests/aerial-test.js');
 });

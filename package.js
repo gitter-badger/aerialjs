@@ -10,6 +10,10 @@ Package.describe({
     documentation: 'README.md'
 });
 
+Npm.depends({
+    'corbel-js': '0.4.0'
+});
+
 Package.onUse(function(api) {
     api.versionsFrom('1.2.1');
     api.use('ecmascript');
@@ -18,7 +22,9 @@ Package.onUse(function(api) {
 
 Package.onTest(function(api) {
     api.use('ecmascript');
-    api.use('tinytest');
+    api.use(["mike:mocha-package", "practicalmeteor:chai", "practicalmeteor:sinon"]);
+
     api.use('bquarks:aerialjs');
-    api.addFiles('aerialjs-tests.js');
+    // Add test files, eg:
+    api.addFiles('aerialjs-test.js');
 });

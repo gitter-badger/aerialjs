@@ -17,14 +17,15 @@ Npm.depends({
 Package.onUse(function(api) {
   api.versionsFrom('1.2.1');
   api.use([
-    'ecmascript',
+    'ecmascript'
   ]);
 
+  api.addFiles('lib/collections/collection.js');
   api.addFiles('lib/aerialjs.js', ['client', 'server']);
-  api.addFiles('lib/collection.js', ['client', 'server']);
   api.addFiles('lib/common.js');
 
   api.export('Aerial', ['client', 'server']);
+  api.export('Collection', ['client', 'server']);
 
 });
 

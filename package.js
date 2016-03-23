@@ -20,6 +20,7 @@ Package.onUse(function(api) {
     'ecmascript'
   ]);
 
+  api.addFiles('client/aerialjs-client.js', ['client']);
   api.addFiles('lib/collections/collection.js');
   api.addFiles('lib/aerialjs.js', ['client', 'server']);
   api.addFiles('lib/common.js');

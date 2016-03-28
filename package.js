@@ -24,6 +24,8 @@ Package.onUse(function(api) {
   api.addFiles('lib/collections/collection.js');
   api.addFiles('lib/aerialjs.js', ['client', 'server']);
   api.addFiles('lib/common.js');
+  api.addFiles('server/external.js', ['server']);
+  api.addFiles('server/publications.js', ['server']);
 
   api.export('Aerial', ['client', 'server']);
   api.export('Collection', ['client', 'server']);

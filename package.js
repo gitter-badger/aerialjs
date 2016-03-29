@@ -15,22 +15,26 @@ Npm.depends({
 });
 
 Package.onUse(function(api) {
-  api.versionsFrom('1.2.1');
-  api.use([
+    api.versionsFrom('1.2.1');
+    api.use([
     'ecmascript',
     'mongo'
-  ]);
+    ]);
 
-  api.addFiles('client/collections/aerialjs.js', ['client']);
-  api.addFiles('client/aerialjs-main.js', ['client']);
-  api.addFiles('lib/common.js');
-  api.addFiles('server/collections/aerialjs.js', ['server']);
-  api.addFiles('server/aerialjs.js', ['server']);
-  api.addFiles('server/external.js', ['server']);
-  api.addFiles('server/publications.js', ['server']);
 
-  api.export('AerialClient', ['client']);
-  api.export('Collection', ['client', 'server']);
+    api.addFiles('lib/common.js');
+    api.addFiles('client/auth/AuthConnector.js', ['client']);
+    api.addFiles('client/auth/AuthPersist.js', ['client']);
+    api.addFiles('client/collections/aerialjs.js', ['client']);
+    api.addFiles('client/aerialjs-main.js', ['client']);
+    api.addFiles('server/collections/aerialjs.js', ['server']);
+    api.addFiles('server/aerialjs.js', ['server']);
+    api.addFiles('server/external.js', ['server']);
+    api.addFiles('server/publications.js', ['server']);
+
+    api.export('AerialClient', ['client']);
+    api.export('Aerial', ['client']);
+    api.export('Collection', ['client', 'server']);
 
 });
 

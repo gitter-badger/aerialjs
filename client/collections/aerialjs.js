@@ -7,7 +7,9 @@ Collection = class Collection {
 
 //Expose Aerial
 Aerial = {
-  Collection
+    Collection,
+    AuthPersist,
+    AuthConnector
 };
 
 //Expose AerialClient

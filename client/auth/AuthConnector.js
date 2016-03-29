@@ -1,0 +1,3 @@
+AuthConnector = class AuthConnector {
+    constructor() {}
+}

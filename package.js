@@ -35,7 +35,7 @@ Package.onUse(function(api) {
 });
 
 Package.onTest(function(api) {
-  api.use(["mike:mocha-package", "practicalmeteor:chai", "practicalmeteor:sinon"]);
+  api.use(["tinytest", "mike:mocha-package", "practicalmeteor:chai", "practicalmeteor:sinon"]);
 
   api.use('bquarks:aerialjs');
   // Add test files, eg:

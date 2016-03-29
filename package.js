@@ -17,17 +17,19 @@ Npm.depends({
 Package.onUse(function(api) {
   api.versionsFrom('1.2.1');
   api.use([
-    'ecmascript'
+    'ecmascript',
+    'mongo'
   ]);
 
-  api.addFiles('client/aerialjs-client.js', ['client']);
-  api.addFiles('lib/collections/collection.js');
-  api.addFiles('lib/aerialjs.js', ['client', 'server']);
+  api.addFiles('client/collections/aerialjs.js', ['client']);
+  api.addFiles('client/aerialjs-main.js', ['client']);
   api.addFiles('lib/common.js');
+  api.addFiles('server/collections/aerialjs.js', ['server']);
+  api.addFiles('server/aerialjs.js', ['server']);
   api.addFiles('server/external.js', ['server']);
   api.addFiles('server/publications.js', ['server']);
 
-  api.export('Aerial', ['client', 'server']);
+  api.export('AerialClient', ['client']);
   api.export('Collection', ['client', 'server']);
 
 });

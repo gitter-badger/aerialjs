@@ -57,4 +57,3 @@ Aerial = {
 }
 
 AerialServer = new Aerial.Collection('aerial');
-

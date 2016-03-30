@@ -1,3 +1,6 @@
+import AuthPersist from './../auth/AuthPersist';
+import AuthConnector from './../auth/AuthConnector';
+
 Collection = class Collection {
 
     constructor(collectionName) {

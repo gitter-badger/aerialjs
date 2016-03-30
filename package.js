@@ -20,8 +20,7 @@ Package.onUse(function(api) {
     api.use('mongo', ['client', 'server']);
 
     api.addFiles('lib/common.js');
-    api.addFiles('client/auth/AuthConnector.js', ['client']);
-    api.addFiles('client/auth/AuthPersist.js', ['client']);
+
     api.addFiles('client/collections/aerialjs.js', ['client']);
     api.addFiles('client/aerialjs-main.js', ['client']);
     api.addFiles('server/collections/aerialjs.js', ['server']);

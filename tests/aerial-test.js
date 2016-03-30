@@ -1,6 +1,3 @@
-
-describe('Aerialjs module', function () {
-	it('can execute an it suite', function() {
-		expect(true).to.equal(true);
-	});
+Tinytest.add('example', function (test) {
+    test.equal(true, true);
 });

@@ -16,11 +16,8 @@ Npm.depends({
 
 Package.onUse(function(api) {
     api.versionsFrom('1.2.1');
-    api.use([
-    'ecmascript',
-    'mongo'
-    ]);
-
+    api.use('ecmascript', ['client', 'server']);
+    api.use('mongo', ['client', 'server']);
 
     api.addFiles('lib/common.js');
     api.addFiles('client/auth/AuthConnector.js', ['client']);
@@ -39,9 +36,9 @@ Package.onUse(function(api) {
 });
 
 Package.onTest(function(api) {
-  api.use(["tinytest", "mike:mocha-package", "practicalmeteor:chai", "practicalmeteor:sinon"]);
+    api.use('tinytest');
 
-  api.use('bquarks:aerialjs');
-  // Add test files, eg:
-  api.addFiles('tests/aerial-test.js');
+    api.use('bquarks:aerialjs');
+    // Add test files, eg:
+    api.addFiles('tests/aerial-test.js');
 });

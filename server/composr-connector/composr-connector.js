@@ -2,8 +2,7 @@ import * as Aerial from './../aerialjs';
 import { Collection } from './../collections/Collection';
 
 Meteor.startup(function () {
-    // const Aerial = {AuthRequest, Collection};
-    console.log('authReq', Aerial);
+
     let authReq = new Aerial.AuthRequest(Config);
 
 
@@ -45,7 +44,7 @@ Meteor.methods({
     logoutUser: function () {
         // AuthRequest.logoutUser();
 
-        uthRequest.logoutUser();
+        authRequest.logoutUser();
     },
 
     createCollection: function(name) {

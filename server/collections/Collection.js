@@ -1,11 +1,9 @@
-import AuthRequest from './../auth/AuthRequest';
-
 //Aerial's class to manage Meteor methods on server side from Minimongo
 
-Collection = class Collection {
+class Collection {
 
     constructor(collectionName) {
-        this.name = collectionName;
+        this.name = collectionName || 'defaultCollection';
         this._addMethods();
     }
 
@@ -52,11 +50,4 @@ Collection = class Collection {
     // Aerial.Collection.rawDatabase = function() {};
 }
 
-
-//Expose Aerial
-Aerial = {
-  Collection,
-  AuthRequest
-}
-
-AerialServer = new Aerial.Collection('aerial');
+export default Collection;

@@ -1,3 +1,0 @@
-AuthConnector = class AuthConnector {
-    constructor() {}
-}

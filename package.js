@@ -17,21 +17,22 @@ Npm.depends({
 Package.onUse(function(api) {
     api.versionsFrom('1.2.1');
     api.use('ecmascript', ['client', 'server']);
+    api.use('timbrandin:fetch', ['server']);
     api.use('mongo', ['client', 'server']);
 
-    api.addFiles('lib/common.js');
+    // api.addAssets('lib/resources/config/config.json', ['server']);
 
-    api.addFiles('client/collections/aerialjs.js', ['client']);
-    api.addFiles('client/aerialjs-main.js', ['client']);
-    api.addFiles('server/collections/aerialjs.js', ['server']);
-    api.addFiles('server/aerialjs.js', ['server']);
-    api.addFiles('server/external.js', ['server']);
+    // api.addFiles('lib/common.js');
+    api.addFiles('lib/composr-connector/composr-connector.js', ['client','server']);
+
+    api.addFiles('client/main.js', ['client']);
+
+    api.addFiles('server/composr-connector/composr-connector.js', ['server']);
     api.addFiles('server/publications.js', ['server']);
 
-    api.export('AerialClient', ['client']);
-    api.export('Aerial', ['client']);
-    api.export('Collection', ['client', 'server']);
+    api.addFiles('server/file-to-delete.js', ['server']);
 
+    api.export('Caca', ['client']);
 });
 
 Package.onTest(function(api) {

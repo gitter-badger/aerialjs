@@ -9,46 +9,45 @@ Meteor.startup(function () {
     authRequest = new Aerial.AuthRequest(Config);
 });
 
-Meteor.methods({
-
-    setAuthRequestConfig: function (config) {
-        //this.config = config;
-    },
-
-    getAuthRequestConfig: function () {
-
-        var defaultConfig = {};
-
-        return Config || this.config || defaultConfig;
-    },
-
-    createAuthRequest: function () {
-
-        var x = new Aerial.AuthRequest(Config);
-        return x;
-    },
+let methods = {};
 
 
-    authClient: function () {
-        // Aerial.AuthRequest.authenticateClient();
-    },
+methods.setAuthRequestConfig = function (config) {
 
-    authUser: function () {
+};
 
-        // return Aerial.AuthRequest.authenticateUser(getAuthRequestConfig());
-    },
+methods.getAuthRequestConfig = function () {
 
-    refreshUserToken: function () {
-    },
+    var defaultConfig = {};
+    return Config || this.config || defaultConfig;
+}
 
-    logoutUser: function () {
-        // AuthRequest.logoutUser();
+methods.authValidation = function () {
 
-        authRequest.logoutUser();
-    },
+};
 
-    createCollection: function(name) {
-       // let col =  new Aerial.Collection(name);
+methods.createAuthRequest = function () {
+    return new Aerial.AuthRequest(Config);
+};
 
-    }
-});
+methods.authClient = function () {
+
+};
+
+methods.authUser = function () {
+
+};
+
+methods.refreshUserToken = function () {
+
+};
+
+methods.logoutUser = function () {
+
+};
+
+methods.createCollection = function () {
+
+};
+
+Meteor.methods(methods);

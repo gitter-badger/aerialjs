@@ -12,6 +12,10 @@ Meteor.startup(function () {
 let methods = {};
 
 
+/////////////////////////
+//////   Methods   //////
+/////////////////////////
+
 methods.setAuthRequestConfig = function (config) {
 
 };
@@ -30,11 +34,11 @@ methods.createAuthRequest = function () {
     return new Aerial.AuthRequest(Config);
 };
 
-methods.authClient = function () {
+methods.loginClient = function () {
 
 };
 
-methods.authUser = function () {
+methods.loginUser = function () {
 
 };
 
@@ -46,8 +50,14 @@ methods.logoutUser = function () {
 
 };
 
-methods.createCollection = function () {
 
+//////////////////////
+//////Collection//////
+//////////////////////
+
+methods.createCollection = function (name) {
+    //TODO: Make this collection as global
+    let col = new Aerial.Collection(name);
 };
 
 Meteor.methods(methods);
